@@ -1,0 +1,128 @@
+{
+  "mode": "kyber_kem_confidential",
+  "count": 5,
+  "max_retries": 2,
+  "retry_delay_seconds": 2.0,
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "chain_id": 11155111,
+  "kem_algorithm": "ml_kem_512",
+  "summary": {
+    "success_count": 5,
+    "failure_count": 0,
+    "success_rate_percent": 100.0,
+    "average_latency_seconds": 11.345528,
+    "max_latency_seconds": 12.344668,
+    "min_latency_seconds": 10.246466,
+    "p50_latency_seconds": 11.363196,
+    "p95_latency_seconds": 12.16141,
+    "p99_latency_seconds": 12.308016,
+    "throughput_tx_per_second": 0.085557,
+    "benchmark_elapsed_seconds": 58.440522,
+    "retry_count": 0,
+    "error_breakdown": {}
+  },
+  "runs": [
+    {
+      "message": "Availability kyber_kem_confidential at 2026-04-16T16:02:28.634792Z",
+      "tx_hash": "a0b9539f21b0698fcdcd078db4175c9316855f2b4975452afffb785388b02896",
+      "status": 1,
+      "gas_used": 334576,
+      "record_id": 8,
+      "app_nonce": 1776355348644092047,
+      "timestamp": 1776355348,
+      "encrypted": true,
+      "benchmark": {
+        "kem_keygen_seconds": 0.000105,
+        "kem_encaps_seconds": 0.000123,
+        "kem_decaps_seconds": 0.000104,
+        "tx_build_seconds": 0.062272,
+        "ecdsa_sign_seconds": 0.015632,
+        "send_and_confirm_seconds": 10.246466
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability kyber_kem_confidential at 2026-04-16T16:02:39.238479Z",
+      "tx_hash": "b733747434c1abf9541acc72d54d70c08a608dfdb68987ab8553a4a98f777d3d",
+      "status": 1,
+      "gas_used": 334576,
+      "record_id": 9,
+      "app_nonce": 1776355359239309164,
+      "timestamp": 1776355359,
+      "encrypted": true,
+      "benchmark": {
+        "kem_keygen_seconds": 0.000124,
+        "kem_encaps_seconds": 0.000105,
+        "kem_decaps_seconds": 0.000126,
+        "tx_build_seconds": 0.061764,
+        "ecdsa_sign_seconds": 0.017824,
+        "send_and_confirm_seconds": 11.344936
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability kyber_kem_confidential at 2026-04-16T16:02:50.901354Z",
+      "tx_hash": "f7b26f4bdd34175a77c44c8d54e7a74d2262e2af16f555af317be74727252228",
+      "status": 1,
+      "gas_used": 334576,
+      "record_id": 10,
+      "app_nonce": 1776355370902082486,
+      "timestamp": 1776355370,
+      "encrypted": true,
+      "benchmark": {
+        "kem_keygen_seconds": 9.7e-05,
+        "kem_encaps_seconds": 8.3e-05,
+        "kem_decaps_seconds": 0.000101,
+        "tx_build_seconds": 0.061841,
+        "ecdsa_sign_seconds": 0.024305,
+        "send_and_confirm_seconds": 12.344668
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability kyber_kem_confidential at 2026-04-16T16:03:03.621319Z",
+      "tx_hash": "6543d3cb193e0c3612d4e7caa07f1deff5d1dca5f155611f4327364a3e3fe90b",
+      "status": 1,
+      "gas_used": 334576,
+      "record_id": 11,
+      "app_nonce": 1776355383622057652,
+      "timestamp": 1776355383,
+      "encrypted": true,
+      "benchmark": {
+        "kem_keygen_seconds": 9.3e-05,
+        "kem_encaps_seconds": 8e-05,
+        "kem_decaps_seconds": 0.000118,
+        "tx_build_seconds": 0.06723,
+        "ecdsa_sign_seconds": 0.028355,
+        "send_and_confirm_seconds": 11.428376
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability kyber_kem_confidential at 2026-04-16T16:03:15.389004Z",
+      "tx_hash": "1712a8941d5779e8e649b7c51696aa9fc83ca9e18b834faf0e6efec8c368a3c9",
+      "status": 1,
+      "gas_used": 334564,
+      "record_id": 12,
+      "app_nonce": 1776355395389647398,
+      "timestamp": 1776355395,
+      "encrypted": true,
+      "benchmark": {
+        "kem_keygen_seconds": 9.3e-05,
+        "kem_encaps_seconds": 7.7e-05,
+        "kem_decaps_seconds": 0.000113,
+        "tx_build_seconds": 0.059429,
+        "ecdsa_sign_seconds": 0.028754,
+        "send_and_confirm_seconds": 11.363196
+      },
+      "attempt": 1,
+      "retries_used": 0
+    }
+  ],
+  "failures": []
+}

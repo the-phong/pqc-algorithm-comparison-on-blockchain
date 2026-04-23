@@ -1,0 +1,127 @@
+{
+  "mode": "pqc_hybrid",
+  "count": 5,
+  "max_retries": 2,
+  "retry_delay_seconds": 2.0,
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "chain_id": 11155111,
+  "summary": {
+    "success_count": 5,
+    "failure_count": 0,
+    "success_rate_percent": 100.0,
+    "average_latency_seconds": 16.070259,
+    "max_latency_seconds": 23.571994,
+    "min_latency_seconds": 9.735854,
+    "p50_latency_seconds": 11.827465,
+    "p95_latency_seconds": 23.554594,
+    "p99_latency_seconds": 23.568514,
+    "throughput_tx_per_second": 0.060922,
+    "benchmark_elapsed_seconds": 82.072606,
+    "retry_count": 0,
+    "error_breakdown": {}
+  },
+  "runs": [
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:09:40.996754Z",
+      "tx_hash": "a17ecb87ddcf8cb2fc1206c68a6c0454624583c89ed9de64b42d0055e62a52ea",
+      "status": 1,
+      "gas_used": 268643,
+      "record_id": 22,
+      "app_nonce": 1776355780996817030,
+      "timestamp": 1776355780,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.000179,
+        "pqc_sign_seconds": 0.000315,
+        "pqc_verify_seconds": 0.000111,
+        "tx_build_seconds": 0.067376,
+        "ecdsa_sign_seconds": 0.018095,
+        "send_and_confirm_seconds": 9.735854
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:09:51.080586Z",
+      "tx_hash": "df9e64733b59fcc505a8e4e51f6a3f8d03e2f8899067d5b07c196e3232ea3e06",
+      "status": 1,
+      "gas_used": 268655,
+      "record_id": 23,
+      "app_nonce": 1776355791080800955,
+      "timestamp": 1776355791,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.000203,
+        "pqc_sign_seconds": 0.000332,
+        "pqc_verify_seconds": 0.000351,
+        "tx_build_seconds": 0.063799,
+        "ecdsa_sign_seconds": 0.01139,
+        "send_and_confirm_seconds": 11.827465
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:10:03.267726Z",
+      "tx_hash": "c41963e170ac70310b7b7815f4c6c9d03539bf35cb58ec6e903dde23eb4c007e",
+      "status": 1,
+      "gas_used": 268655,
+      "record_id": 24,
+      "app_nonce": 1776355803267816963,
+      "timestamp": 1776355803,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.000117,
+        "pqc_sign_seconds": 0.000341,
+        "pqc_verify_seconds": 9.6e-05,
+        "tx_build_seconds": 0.063041,
+        "ecdsa_sign_seconds": 0.010754,
+        "send_and_confirm_seconds": 11.730987
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:10:15.343869Z",
+      "tx_hash": "c5125cc7b9037cec7dc8c62af8961cef4238120a12e1499ec97c1df84b649c1a",
+      "status": 1,
+      "gas_used": 268655,
+      "record_id": 25,
+      "app_nonce": 1776355815344055310,
+      "timestamp": 1776355815,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.000302,
+        "pqc_sign_seconds": 0.000663,
+        "pqc_verify_seconds": 0.000276,
+        "tx_build_seconds": 0.068433,
+        "ecdsa_sign_seconds": 0.018908,
+        "send_and_confirm_seconds": 23.484993
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:10:39.182624Z",
+      "tx_hash": "d8bae4fc0ca99d8bcdfa456548412cd71fc9417d9010e0c0093e981090752ef6",
+      "status": 1,
+      "gas_used": 268643,
+      "record_id": 26,
+      "app_nonce": 1776355839182816406,
+      "timestamp": 1776355839,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.000273,
+        "pqc_sign_seconds": 0.000768,
+        "pqc_verify_seconds": 0.000366,
+        "tx_build_seconds": 0.059259,
+        "ecdsa_sign_seconds": 0.019308,
+        "send_and_confirm_seconds": 23.571994
+      },
+      "attempt": 1,
+      "retries_used": 0
+    }
+  ],
+  "failures": []
+}

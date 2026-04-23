@@ -1,0 +1,41 @@
+{
+  "mode": "kyber_kem_confidential",
+  "message": "Hello from ML-KEM confidentiality demo at 2026-04-16T16:01:16.444305Z",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "chain_id": 11155111,
+  "record_id": 2,
+  "tx_hash": "928c8aea5bac26cd396018dc88a15c3cfd5650f3b441aaa66802170b64035c8f",
+  "gas_used": 334612,
+  "status": 1,
+  "app_nonce": 1776355276452031511,
+  "timestamp": 1776355276,
+  "payload_hash": "0x49baf7134a4049f2b1a88d0382502fa123a8155c3afbedf1144c26dc0aa602f2",
+  "kem_proof_hash": "0xb70636646ccf5e03c87a87c51c9965f9f783bbafef8ef9df1a465d20c7cacae3",
+  "encrypted": true,
+  "confidentiality": {
+    "algorithm": "aes-256-gcm",
+    "plaintext_size_bytes": 69,
+    "encrypted_payload_size_bytes": 101,
+    "encryption_seconds": 0.007215,
+    "decrypt_seconds": 0.000234,
+    "decrypt_matches_plaintext": true
+  },
+  "kem": {
+    "algorithm": "ml_kem_512",
+    "public_key_size_bytes": 800,
+    "secret_key_size_bytes": 1632,
+    "ciphertext_size_bytes": 768,
+    "shared_secret_size_bytes": 32
+  },
+  "benchmark": {
+    "kem_keygen_seconds": 7.1e-05,
+    "kem_encaps_seconds": 5.4e-05,
+    "kem_decaps_seconds": 6.1e-05,
+    "tx_build_seconds": 0.066189,
+    "ecdsa_sign_seconds": 0.015555,
+    "send_and_confirm_seconds": 10.155024,
+    "ecdsa_signature_size_bytes": 65,
+    "ecdsa_raw_tx_size_bytes": 570
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "mode": "traditional",
+  "count": 5,
+  "max_retries": 2,
+  "retry_delay_seconds": 2.0,
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "chain_id": 11155111,
+  "pqc_algorithm": "falcon_512",
+  "summary": {
+    "success_count": 5,
+    "failure_count": 0,
+    "success_rate_percent": 100.0,
+    "average_latency_seconds": 11.391358,
+    "max_latency_seconds": 12.859691,
+    "min_latency_seconds": 10.177875,
+    "p50_latency_seconds": 10.737128,
+    "p95_latency_seconds": 12.843536,
+    "p99_latency_seconds": 12.85646,
+    "throughput_tx_per_second": 0.08488,
+    "benchmark_elapsed_seconds": 58.906614,
+    "retry_count": 0,
+    "error_breakdown": {}
+  },
+  "runs": [
+    {
+      "message": "Availability traditional at 2026-04-16T16:15:28.298439Z",
+      "tx_hash": "3a48b1cb76a062645ab96b89b0c8cd1feb7f984629a65d2afd55a335b69122d3",
+      "status": 1,
+      "gas_used": 248395,
+      "record_id": 36,
+      "app_nonce": 1776356128298480253,
+      "timestamp": 1776356128,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.0,
+        "pqc_sign_seconds": 0.0,
+        "pqc_verify_seconds": 0.0,
+        "tx_build_seconds": 0.065503,
+        "ecdsa_sign_seconds": 0.010616,
+        "send_and_confirm_seconds": 10.403182
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability traditional at 2026-04-16T16:15:39.059227Z",
+      "tx_hash": "ed1f7bcde35197ff05195665af8d8bf88f53d3abdac3a93eaa58f63cba2d1965",
+      "status": 1,
+      "gas_used": 248395,
+      "record_id": 37,
+      "app_nonce": 1776356139059377472,
+      "timestamp": 1776356139,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.0,
+        "pqc_sign_seconds": 0.0,
+        "pqc_verify_seconds": 0.0,
+        "tx_build_seconds": 0.070526,
+        "ecdsa_sign_seconds": 0.014643,
+        "send_and_confirm_seconds": 12.778916
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability traditional at 2026-04-16T16:15:52.188219Z",
+      "tx_hash": "e84d76dbbf7aa306ac8bdbe64ed60762b19326a6ccd881d2b842572a84a38a11",
+      "status": 1,
+      "gas_used": 248395,
+      "record_id": 38,
+      "app_nonce": 1776356152188318272,
+      "timestamp": 1776356152,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.0,
+        "pqc_sign_seconds": 0.0,
+        "pqc_verify_seconds": 0.0,
+        "tx_build_seconds": 0.065345,
+        "ecdsa_sign_seconds": 0.010537,
+        "send_and_confirm_seconds": 10.737128
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability traditional at 2026-04-16T16:16:03.266962Z",
+      "tx_hash": "e0a1402ef929a27a42615852c7d1bf001edce0aa5b2e16f953e63b57fdbd2d3d",
+      "status": 1,
+      "gas_used": 248395,
+      "record_id": 39,
+      "app_nonce": 1776356163267171769,
+      "timestamp": 1776356163,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.0,
+        "pqc_sign_seconds": 0.0,
+        "pqc_verify_seconds": 0.0,
+        "tx_build_seconds": 0.066167,
+        "ecdsa_sign_seconds": 0.011092,
+        "send_and_confirm_seconds": 12.859691
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability traditional at 2026-04-16T16:16:16.662547Z",
+      "tx_hash": "1b1ff91df207470bd1b3be562ff65deda193697855116fb8ea41c1e02a589d09",
+      "status": 1,
+      "gas_used": 248395,
+      "record_id": 40,
+      "app_nonce": 1776356176662701289,
+      "timestamp": 1776356176,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.0,
+        "pqc_sign_seconds": 0.0,
+        "pqc_verify_seconds": 0.0,
+        "tx_build_seconds": 0.066769,
+        "ecdsa_sign_seconds": 0.01999,
+        "send_and_confirm_seconds": 10.177875
+      },
+      "attempt": 1,
+      "retries_used": 0
+    }
+  ],
+  "failures": []
+}

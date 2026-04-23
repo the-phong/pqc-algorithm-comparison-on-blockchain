@@ -1,0 +1,32 @@
+{
+  "mode": "pqc_hybrid",
+  "message": "Hello from PQC demo at 2026-04-16T16:22:28.985569Z",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "chain_id": 11155111,
+  "record_id": 52,
+  "tx_hash": "97581ec84f486147218835e73a7a566b51446f70adf8bde24f5f397c83024c6f",
+  "gas_used": 268607,
+  "status": 1,
+  "app_nonce": 1776356548985615944,
+  "timestamp": 1776356548,
+  "payload_hash": "0x8f94cc30aa4bd06a5dede37cd0462daf747bad0d3b47a709607b32595d8a3072",
+  "pqc_proof_hash": "0x30b84d59ad7c6c8df873a12584aed38f502f2cd5c6cbe5df659e33d68051a087",
+  "encrypted": false,
+  "pqc": {
+    "algorithm": "sphincs_sha2_128f_simple",
+    "public_key_size_bytes": 32,
+    "secret_key_size_bytes": 64,
+    "signature_size_bytes": 17088
+  },
+  "benchmark": {
+    "pqc_keygen_seconds": 0.00123,
+    "pqc_sign_seconds": 0.036289,
+    "pqc_verify_seconds": 0.001635,
+    "tx_build_seconds": 0.062004,
+    "ecdsa_sign_seconds": 0.009201,
+    "send_and_confirm_seconds": 21.574438,
+    "ecdsa_signature_size_bytes": 65,
+    "ecdsa_raw_tx_size_bytes": 506
+  }
+}

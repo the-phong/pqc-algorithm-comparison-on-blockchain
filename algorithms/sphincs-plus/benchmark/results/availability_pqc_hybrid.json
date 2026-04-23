@@ -1,0 +1,105 @@
+{
+  "mode": "pqc_hybrid",
+  "count": 5,
+  "max_retries": 2,
+  "retry_delay_seconds": 2.0,
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "chain_id": 11155111,
+  "pqc_algorithm": "sphincs_sha2_128f_simple",
+  "summary": {
+    "success_count": 3,
+    "failure_count": 2,
+    "success_rate_percent": 60.0,
+    "average_latency_seconds": 22.841377,
+    "max_latency_seconds": 33.278625,
+    "min_latency_seconds": 11.358404,
+    "p50_latency_seconds": 23.887101,
+    "p95_latency_seconds": 32.339473,
+    "p99_latency_seconds": 33.090795,
+    "throughput_tx_per_second": 0.037738,
+    "benchmark_elapsed_seconds": 79.494855,
+    "retry_count": 4,
+    "error_breakdown": {
+      "insufficient_funds": 2
+    }
+  },
+  "runs": [
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:24:29.377460Z",
+      "tx_hash": "b3064649ac8b9c6f55327113d47d9942f65cc63953ea147669409ba94e187c48",
+      "status": 1,
+      "gas_used": 268655,
+      "record_id": 60,
+      "app_nonce": 1776356669377535329,
+      "timestamp": 1776356669,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.002376,
+        "pqc_sign_seconds": 0.036835,
+        "pqc_verify_seconds": 0.003275,
+        "tx_build_seconds": 0.064554,
+        "ecdsa_sign_seconds": 0.017228,
+        "send_and_confirm_seconds": 33.278625
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:25:03.040401Z",
+      "tx_hash": "234efc24e5b32694c6b7665295c0734691c2f3f3ff7a227a6aa8102c0ff22bc9",
+      "status": 1,
+      "gas_used": 268655,
+      "record_id": 61,
+      "app_nonce": 1776356703040616958,
+      "timestamp": 1776356703,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.002954,
+        "pqc_sign_seconds": 0.043198,
+        "pqc_verify_seconds": 0.001707,
+        "tx_build_seconds": 0.060794,
+        "ecdsa_sign_seconds": 0.010565,
+        "send_and_confirm_seconds": 23.887101
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-04-16T16:25:27.349865Z",
+      "tx_hash": "01c836af6c57b94a1f0146bc1b958d240fced82f9d72de9398b820d647a8d54a",
+      "status": 1,
+      "gas_used": 268655,
+      "record_id": 62,
+      "app_nonce": 1776356727350079461,
+      "timestamp": 1776356727,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.002876,
+        "pqc_sign_seconds": 0.040795,
+        "pqc_verify_seconds": 0.001624,
+        "tx_build_seconds": 0.069381,
+        "ecdsa_sign_seconds": 0.018588,
+        "send_and_confirm_seconds": 11.358404
+      },
+      "attempt": 1,
+      "retries_used": 0
+    }
+  ],
+  "failures": [
+    {
+      "attempt": 3,
+      "retries_used": 2,
+      "error_type": "insufficient_funds",
+      "error": "{'code': -32003, 'message': 'insufficient funds for gas * price + value: have 14917157027285114 want 15000000000000000'}",
+      "run_index": 4
+    },
+    {
+      "attempt": 3,
+      "retries_used": 2,
+      "error_type": "insufficient_funds",
+      "error": "{'code': -32003, 'message': 'insufficient funds for gas * price + value: have 14917157027285114 want 15000000000000000'}",
+      "run_index": 5
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "mode": "pqc_confidential",
+  "message": "Hello from confidentiality demo at 2026-04-16T16:15:16.354905Z",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "chain_id": 11155111,
+  "record_id": 35,
+  "tx_hash": "b1f7130e615d30186e999a5fbce3837dc829cbe5224a51d4f94278f12de85eeb",
+  "gas_used": 311788,
+  "status": 1,
+  "app_nonce": 1776356116364331996,
+  "timestamp": 1776356116,
+  "payload_hash": "0xbb0ad23e707ff39439d5e0ecc45df52cf420bb9b7f896a0221b125a775a7c0ec",
+  "pqc_proof_hash": "0x9d9dfac297de38103de5f98484b44aa89ee43c7a4519a024431533c9a7855a0b",
+  "encrypted": true,
+  "confidentiality": {
+    "algorithm": "aes-256-gcm",
+    "plaintext_size_bytes": 62,
+    "encrypted_payload_size_bytes": 94,
+    "nonce_size_bytes": 16,
+    "tag_size_bytes": 16,
+    "encryption_seconds": 0.009062,
+    "decrypt_seconds": 0.000263,
+    "decrypt_matches_plaintext": true
+  },
+  "pqc": {
+    "algorithm": "falcon_512",
+    "public_key_size_bytes": 897,
+    "secret_key_size_bytes": 1281,
+    "signature_size_bytes": 656
+  },
+  "benchmark": {
+    "pqc_keygen_seconds": 0.009487,
+    "pqc_sign_seconds": 0.004122,
+    "pqc_verify_seconds": 5.3e-05,
+    "tx_build_seconds": 0.05968,
+    "ecdsa_sign_seconds": 0.014663,
+    "send_and_confirm_seconds": 10.141497,
+    "ecdsa_signature_size_bytes": 65,
+    "ecdsa_raw_tx_size_bytes": 538
+  }
+}

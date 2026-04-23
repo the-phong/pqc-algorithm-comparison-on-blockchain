@@ -1,0 +1,23 @@
+{
+  "mode": "traditional",
+  "message": "Hello from traditional demo at 2026-04-16T16:22:14.479549Z",
+  "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "chain_id": 11155111,
+  "record_id": 51,
+  "tx_hash": "4705f5d9b4ce0d2e406b7f502bee4272969fe0e67df2a62428d7fefc6693c4b9",
+  "gas_used": 248431,
+  "status": 1,
+  "app_nonce": 1776356534479593268,
+  "timestamp": 1776356534,
+  "payload_hash": "0x3cc269f6bd02ee71e3b0a10ebf3668cb813f5f0af496378a1b226dd5196089c9",
+  "pqc_proof_hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "encrypted": false,
+  "benchmark": {
+    "tx_build_seconds": 0.065287,
+    "ecdsa_sign_seconds": 0.021853,
+    "send_and_confirm_seconds": 12.406174,
+    "signature_size_bytes": 65,
+    "raw_tx_size_bytes": 506
+  }
+}
