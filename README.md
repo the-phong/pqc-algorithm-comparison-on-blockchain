@@ -39,3 +39,11 @@ Common files used by every algorithm:
 
 - `dilithium`, `falcon`, `sphincs-plus` are signature-oriented packs.
 - `kyber-kem` is a KEM-oriented pack.
+
+## Off-chain proof flow
+
+The Dilithium pack now supports an end-to-end proof flow:
+
+- sender stores the Dilithium signature and public key in local off-chain storage
+- sender writes `ipfsCid` and `algorithm` into the on-chain record
+- verifier reads the record, reloads the signature/public key, and verifies both the proof hash and the Dilithium signature

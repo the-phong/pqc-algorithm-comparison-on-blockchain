@@ -39,6 +39,8 @@ def main() -> None:
     pqc_proof_hash = "0x" + ("00" * 32)
     encrypted = False
     mode = "traditional"
+    ipfs_cid = ""
+    algorithm = "none"
 
     nonce = w3.eth.get_transaction_count(acct.address)
     build_start = time.perf_counter()
@@ -50,6 +52,8 @@ def main() -> None:
         app_metadata["timestamp"],
         encrypted,
         mode,
+        ipfs_cid,
+        algorithm,
     ).build_transaction(
         {
             "from": acct.address,
@@ -88,6 +92,8 @@ def main() -> None:
         "payload_hash": payload_hash,
         "pqc_proof_hash": pqc_proof_hash,
         "encrypted": encrypted,
+        "ipfs_cid": ipfs_cid,
+        "algorithm": algorithm,
         "benchmark": {
             "tx_build_seconds": round(build_seconds, 6),
             "ecdsa_sign_seconds": round(sign_seconds, 6),

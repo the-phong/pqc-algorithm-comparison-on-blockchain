@@ -73,6 +73,8 @@ def main() -> None:
     app_metadata = build_app_metadata()
     encrypted = True
     mode = "pqc_confidential"
+    ipfs_cid = ""
+    algorithm = sphincs_sha2_128f_simple.ALGORITHM
 
     keygen_start = time.perf_counter()
     public_key, secret_key = sphincs_sha2_128f_simple.generate_keypair()
@@ -101,6 +103,8 @@ def main() -> None:
         app_metadata["timestamp"],
         encrypted,
         mode,
+        ipfs_cid,
+        algorithm,
     ).build_transaction(
         {
             "from": acct.address,
@@ -139,6 +143,8 @@ def main() -> None:
         "payload_hash": payload_hash,
         "pqc_proof_hash": pqc_proof_hash,
         "encrypted": encrypted,
+        "ipfs_cid": ipfs_cid,
+        "algorithm": algorithm,
         "confidentiality": {
             "algorithm": "aes-256-gcm",
             "plaintext_size_bytes": len(plaintext),
@@ -150,7 +156,7 @@ def main() -> None:
             "decrypt_matches_plaintext": True,
         },
         "pqc": {
-            "algorithm": sphincs_sha2_128f_simple.ALGORITHM,
+            "algorithm": algorithm,
             "public_key_size_bytes": sphincs_sha2_128f_simple.PUBLIC_KEY_SIZE,
             "secret_key_size_bytes": sphincs_sha2_128f_simple.SECRET_KEY_SIZE,
             "signature_size_bytes": len(pqc_signature),

@@ -17,6 +17,7 @@ from common import (
     require_env,
     write_result,
 )
+from offchain_storage import save_public_key, save_signature, storage_backend_name
 
 
 def main() -> None:
@@ -40,10 +41,13 @@ def main() -> None:
     app_metadata = build_app_metadata()
     encrypted = False
     mode = "pqc_hybrid"
+    algorithm = falcon_512.ALGORITHM
 
     keygen_start = time.perf_counter()
     public_key, secret_key = falcon_512.generate_keypair()
     keygen_seconds = time.perf_counter() - keygen_start
+
+    public_key_cid, public_key_path, public_key_upload_seconds = save_public_key(public_key)
 
     pqc_sign_start = time.perf_counter()
     pqc_signature = falcon_512.sign(secret_key, payload)
@@ -56,6 +60,7 @@ def main() -> None:
     if not verified:
         raise RuntimeError("PQC verification failed")
 
+    ipfs_cid, signature_path, signature_upload_seconds = save_signature(pqc_signature)
     pqc_proof_hash = w3.to_hex(w3.keccak(payload + pqc_signature))
 
     nonce = w3.eth.get_transaction_count(acct.address)
@@ -68,6 +73,8 @@ def main() -> None:
         app_metadata["timestamp"],
         encrypted,
         mode,
+        ipfs_cid,
+        algorithm,
     ).build_transaction(
         {
             "from": acct.address,
@@ -106,8 +113,15 @@ def main() -> None:
         "payload_hash": payload_hash,
         "pqc_proof_hash": pqc_proof_hash,
         "encrypted": encrypted,
+        "ipfs_cid": ipfs_cid,
+        "public_key_cid": public_key_cid,
+        "offchain_storage": {
+            "storage_backend": storage_backend_name(),
+            "signature_path": str(signature_path),
+            "public_key_path": str(public_key_path),
+        },
         "pqc": {
-            "algorithm": falcon_512.ALGORITHM,
+            "algorithm": algorithm,
             "public_key_size_bytes": falcon_512.PUBLIC_KEY_SIZE,
             "secret_key_size_bytes": falcon_512.SECRET_KEY_SIZE,
             "signature_size_bytes": len(pqc_signature),
@@ -116,6 +130,8 @@ def main() -> None:
             "pqc_keygen_seconds": round(keygen_seconds, 6),
             "pqc_sign_seconds": round(pqc_sign_seconds, 6),
             "pqc_verify_seconds": round(pqc_verify_seconds, 6),
+            "public_key_upload_seconds": public_key_upload_seconds,
+            "signature_upload_seconds": signature_upload_seconds,
             "tx_build_seconds": round(build_seconds, 6),
             "ecdsa_sign_seconds": round(ecdsa_sign_seconds, 6),
             "send_and_confirm_seconds": round(send_seconds, 6),
@@ -129,6 +145,7 @@ def main() -> None:
     print("PQC Verification: PASS")
     print("Transaction Confirmed")
     print(f"Tx Hash: {tx_hash.hex()}")
+    print(f"Proof CID: {ipfs_cid}")
     print(f"PQC Signature Size: {len(pqc_signature)} bytes")
     print(f"Gas Used: {receipt.gasUsed}")
     print(f"Result File: {output_path}")

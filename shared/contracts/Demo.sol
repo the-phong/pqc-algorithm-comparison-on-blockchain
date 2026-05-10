@@ -12,6 +12,8 @@ contract Demo {
         uint256 timestamp;
         bool encrypted;
         string mode;
+        string ipfsCid;
+        string algorithm;
     }
 
     uint256 public lastRecordId;
@@ -28,7 +30,9 @@ contract Demo {
         uint256 appNonce,
         uint256 timestamp,
         bool encrypted,
-        string mode
+        string mode,
+        string ipfsCid,
+        string algorithm
     );
 
     function storeRecord(
@@ -38,7 +42,9 @@ contract Demo {
         uint256 appNonce,
         uint256 timestamp,
         bool encrypted,
-        string memory mode
+        string memory mode,
+        string memory ipfsCid,
+        string memory algorithm
     ) public {
         require(appNonce > lastNonceBySender[msg.sender], "stale nonce");
         require(keccak256(payload) == payloadHash, "payload hash mismatch");
@@ -55,7 +61,9 @@ contract Demo {
             appNonce: appNonce,
             timestamp: timestamp,
             encrypted: encrypted,
-            mode: mode
+            mode: mode,
+            ipfsCid: ipfsCid,
+            algorithm: algorithm
         });
 
         lastNonceBySender[msg.sender] = appNonce;
@@ -69,7 +77,9 @@ contract Demo {
             appNonce,
             timestamp,
             encrypted,
-            mode
+            mode,
+            ipfsCid,
+            algorithm
         );
     }
 
@@ -87,6 +97,8 @@ contract Demo {
             uint256,
             uint256,
             bool,
+            string memory,
+            string memory,
             string memory
         )
     {
@@ -100,7 +112,9 @@ contract Demo {
             record.appNonce,
             record.timestamp,
             record.encrypted,
-            record.mode
+            record.mode,
+            record.ipfsCid,
+            record.algorithm
         );
     }
 }

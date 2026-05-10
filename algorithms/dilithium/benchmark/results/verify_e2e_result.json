@@ -1,0 +1,24 @@
+{
+  "record_id": 4,
+  "owner": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
+  "mode": "pqc_hybrid",
+  "algorithm": "ml_dsa_44",
+  "ipfs_cid": "234af6238e4e1538aa77fc1a0c6328ebd1c3cd05fbdb705b0c71339428139084",
+  "public_key_cid": "2b1b17c11020963aee4c03eee403c0d19a499c55397fe8f31e03a510480d2426",
+  "payload_hash_matches": true,
+  "proof_hash_matches": true,
+  "signature_valid": true,
+  "verification_passed": true,
+  "offchain_storage": {
+    "storage_backend": "local_cid_store",
+    "signature_path": "/mnt/d/PTIT/Ky6_PTIT/MMHCS/demo/pqc-suite/shared/offchain_store/234af6238e4e1538aa77fc1a0c6328ebd1c3cd05fbdb705b0c71339428139084.sig",
+    "public_key_path": "/mnt/d/PTIT/Ky6_PTIT/MMHCS/demo/pqc-suite/shared/offchain_store/2b1b17c11020963aee4c03eee403c0d19a499c55397fe8f31e03a510480d2426.pub"
+  },
+  "benchmark": {
+    "signature_download_seconds": 0.024947,
+    "public_key_download_seconds": 0.021925,
+    "hash_comparison_seconds": 0.000177,
+    "pqc_verify_seconds": 0.000252,
+    "e2e_verification_latency": 0.047301
+  }
+}

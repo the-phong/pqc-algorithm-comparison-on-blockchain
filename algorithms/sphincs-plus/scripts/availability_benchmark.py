@@ -92,6 +92,8 @@ def send_one(contract, acct, w3, mode: str, confidentiality_secret: str, wait_ti
     app_metadata = build_app_metadata()
 
     pqc_proof_hash = "0x" + ("00" * 32)
+    ipfs_cid = ""
+    algorithm = "none"
     pqc_keygen_seconds = 0.0
     pqc_sign_seconds = 0.0
     pqc_verify_seconds = 0.0
@@ -112,6 +114,7 @@ def send_one(contract, acct, w3, mode: str, confidentiality_secret: str, wait_ti
             raise RuntimeError("PQC verification failed during availability benchmark")
 
         pqc_proof_hash = w3.to_hex(w3.keccak(payload + pqc_signature))
+        algorithm = sphincs_sha2_128f_simple.ALGORITHM
 
     nonce = w3.eth.get_transaction_count(acct.address)
     build_start = time.perf_counter()
@@ -123,6 +126,8 @@ def send_one(contract, acct, w3, mode: str, confidentiality_secret: str, wait_ti
         app_metadata["timestamp"],
         encrypted,
         mode,
+        ipfs_cid,
+        algorithm,
     ).build_transaction(
         {
             "from": acct.address,

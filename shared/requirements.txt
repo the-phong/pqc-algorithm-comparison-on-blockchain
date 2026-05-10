@@ -3,3 +3,4 @@ eth-account
 pqcrypto
 matplotlib
 pycryptodome
+ipfshttpclient

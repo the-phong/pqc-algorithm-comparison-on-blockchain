@@ -45,6 +45,8 @@ def send_setup_transaction(contract, acct, w3, payload: bytes, app_nonce: int, t
         timestamp,
         False,
         "integrity_replay_setup",
+        "",
+        "none",
     ).build_transaction(
         {
             "from": acct.address,
@@ -123,6 +125,8 @@ def main() -> None:
             int(time.time()),
             False,
             "integrity_replay_attempt",
+            "",
+            "none",
         ).call({"from": acct.address})
     except ContractLogicError as exc:
         replay_blocked = True

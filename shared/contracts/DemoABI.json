@@ -55,6 +55,18 @@
         "internalType": "string",
         "name": "mode",
         "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ipfsCid",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "algorithm",
+        "type": "string"
       }
     ],
     "name": "RecordStored",
@@ -109,6 +121,16 @@
         "internalType": "bool",
         "name": "",
         "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
       },
       {
         "internalType": "string",
@@ -186,6 +208,16 @@
       {
         "internalType": "string",
         "name": "mode",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ipfsCid",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "algorithm",
         "type": "string"
       }
     ],
