@@ -118,6 +118,8 @@ def send_one(contract, acct, w3, mode: str, wait_timeout: int, kem) -> dict:
         app_metadata["timestamp"],
         encrypted,
         mode,
+        "",
+        kem.ALGORITHM,
     ).build_transaction(
         {
             "from": acct.address,

@@ -99,6 +99,8 @@ def main() -> None:
         app_metadata["timestamp"],
         encrypted,
         mode,
+        "",
+        ml_kem_512.ALGORITHM,
     ).build_transaction(
         {
             "from": acct.address,

@@ -1,24 +1,24 @@
 {
   "mode": "kyber_kem_confidential",
-  "message": "Hello from ML-KEM confidentiality demo at 2026-04-16T16:01:16.444305Z",
+  "message": "Hello from ML-KEM confidentiality demo at 2026-05-10T07:18:17.444991Z",
   "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
-  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "contract_address": "0x1422a403ecCD22c97D6454d954ECE6777ddBC140",
   "chain_id": 11155111,
-  "record_id": 2,
-  "tx_hash": "928c8aea5bac26cd396018dc88a15c3cfd5650f3b441aaa66802170b64035c8f",
-  "gas_used": 334612,
+  "record_id": 51,
+  "tx_hash": "f970d5a1fcee6e71ffffed0ad85dd056108ca82782d338577fb771a8f3be1068",
+  "gas_used": 363926,
   "status": 1,
-  "app_nonce": 1776355276452031511,
-  "timestamp": 1776355276,
-  "payload_hash": "0x49baf7134a4049f2b1a88d0382502fa123a8155c3afbedf1144c26dc0aa602f2",
-  "kem_proof_hash": "0xb70636646ccf5e03c87a87c51c9965f9f783bbafef8ef9df1a465d20c7cacae3",
+  "app_nonce": 1778397497450494347,
+  "timestamp": 1778397497,
+  "payload_hash": "0x1e146dec6d388ca31bab55fe4b91edcab7035f78fd3b7de1523881078791895a",
+  "kem_proof_hash": "0x1ec831e2c1bf02cb4dcb1c1f7f81e712092650554439382173d5f340de508d62",
   "encrypted": true,
   "confidentiality": {
     "algorithm": "aes-256-gcm",
     "plaintext_size_bytes": 69,
     "encrypted_payload_size_bytes": 101,
-    "encryption_seconds": 0.007215,
-    "decrypt_seconds": 0.000234,
+    "encryption_seconds": 0.005121,
+    "decrypt_seconds": 0.00018,
     "decrypt_matches_plaintext": true
   },
   "kem": {
@@ -29,13 +29,13 @@
     "shared_secret_size_bytes": 32
   },
   "benchmark": {
-    "kem_keygen_seconds": 7.1e-05,
-    "kem_encaps_seconds": 5.4e-05,
-    "kem_decaps_seconds": 6.1e-05,
-    "tx_build_seconds": 0.066189,
-    "ecdsa_sign_seconds": 0.015555,
-    "send_and_confirm_seconds": 10.155024,
+    "kem_keygen_seconds": 5e-05,
+    "kem_encaps_seconds": 3.8e-05,
+    "kem_decaps_seconds": 4.2e-05,
+    "tx_build_seconds": 0.074492,
+    "ecdsa_sign_seconds": 0.023677,
+    "send_and_confirm_seconds": 5.91963,
     "ecdsa_signature_size_bytes": 65,
-    "ecdsa_raw_tx_size_bytes": 570
+    "ecdsa_raw_tx_size_bytes": 731
   }
 }
