@@ -1,4 +1,4 @@
-"""Availability benchmark for traditional mode and ML-KEM confidentiality mode."""
+"""Availability benchmark for ML-KEM confidentiality mode."""
 
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--mode",
-        choices=["traditional", "kyber_kem_confidential"],
+        choices=["kyber_kem_confidential"],
         required=True,
     )
     parser.add_argument("--count", type=int, default=5)
@@ -50,13 +50,6 @@ def encrypt_payload(key: bytes, plaintext: bytes) -> bytes:
 def build_mode_payload(mode: str, kem) -> tuple[str, bytes, bool, bytes, dict[str, float]]:
     message = f"Availability {mode} at {datetime.utcnow().isoformat()}Z"
     plaintext = message.encode("utf-8")
-    if mode == "traditional":
-        return message, plaintext, False, b"", {
-            "kem_keygen_seconds": 0.0,
-            "kem_encaps_seconds": 0.0,
-            "kem_decaps_seconds": 0.0,
-        }
-
     keygen_start = time.perf_counter()
     public_key, secret_key = kem.generate_keypair()
     kem_keygen_seconds = time.perf_counter() - keygen_start
@@ -113,9 +106,7 @@ def send_one(contract, acct, w3, mode: str, wait_timeout: int, kem) -> dict:
     message, payload, encrypted, kem_ciphertext, kem_bench = build_mode_payload(mode, kem)
     payload_hash = w3.to_hex(w3.keccak(payload))
     app_metadata = build_app_metadata()
-    kem_proof_hash = "0x" + ("00" * 32)
-    if mode == "kyber_kem_confidential":
-        kem_proof_hash = w3.to_hex(w3.keccak(payload + kem_ciphertext))
+    kem_proof_hash = w3.to_hex(w3.keccak(payload + kem_ciphertext))
 
     nonce = w3.eth.get_transaction_count(acct.address)
     build_start = time.perf_counter()

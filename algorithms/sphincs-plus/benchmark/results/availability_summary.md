@@ -1,10 +1,10 @@
 # Availability Summary
 
-| Mode | Success | Failure | Success Rate | Avg Latency (s) | P95 (s) | P99 (s) | Throughput (tx/s) | Retries | Avg Gas |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| traditional | 5 | 0 | 100.0% | 11.250809 | 11.995968 | 12.023918 | 0.086140 | 0 | 248395.00 |
-| pqc_hybrid | 3 | 2 | 60.0% | 22.841377 | 32.339473 | 33.090795 | 0.037738 | 4 | 268655.00 |
-| pqc_confidential | 0 | 5 | 0.0% | - | - | - | 0.000000 | 10 | - |
+| Mode             |Success|Failure|Success Rate|Avg Latency(s)|   P95(s)  |  P99(s)   |Throughput(tx/s)|Retries|Avg Gas|
+| ---------------- |-------|-------|------------|--------------|-----------|-----------|----------------|-------|-------|
+| traditional      |   5   |   0   |   100.0%   |   12.125454  | 13.223061 | 13.352819 |    0.079997    |   0   | 277813.20 |
+| pqc_hybrid       |   5   |   0   |   100.0%   |   10.498408  | 12.365750 | 12.495329 |    0.091765    |   0   | 298313.20 |
+| pqc_confidential |   5   |   0   |   100.0%   |   10.799911  | 12.157183 | 12.301167 |    0.088838    |   0   | 341337.20 |
 
 ## Source Files
 
@@ -15,5 +15,5 @@
 ## Error Breakdown
 
 - traditional: none
-- pqc_hybrid: insufficient_funds=2
-- pqc_confidential: insufficient_funds=5
+- pqc_hybrid: none
+- pqc_confidential: none

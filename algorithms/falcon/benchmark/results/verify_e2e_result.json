@@ -1,24 +1,24 @@
 {
-  "record_id": 2,
+  "record_id": 23,
   "owner": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
   "mode": "pqc_hybrid",
   "algorithm": "falcon_512",
-  "ipfs_cid": "4821c36f3d8686b6bb85874150cc8251b0661ef95f23cda873a6cab4fe90838a",
-  "public_key_cid": "1cef9a07d24702c2921c8f82fb006d9bd456b7a94fa8781677314ed5fcf313d2",
+  "ipfs_cid": "671eee2e3aa493d7d4e618d5c73cf0ec188b3a7dd46528257dc9ce00e3d15aad",
+  "public_key_cid": "00396a181673ffccbe287300e9323f087eda10cf3974bd7b030ea762588b2f36",
   "payload_hash_matches": true,
   "proof_hash_matches": true,
-  "signature_valid": true,
-  "verification_passed": true,
+  "signature_valid": false,
+  "verification_passed": false,
   "offchain_storage": {
     "storage_backend": "local_cid_store",
-    "signature_path": "/mnt/d/PTIT/Ky6_PTIT/MMHCS/demo/pqc-suite/shared/offchain_store/4821c36f3d8686b6bb85874150cc8251b0661ef95f23cda873a6cab4fe90838a.sig",
-    "public_key_path": "/mnt/d/PTIT/Ky6_PTIT/MMHCS/demo/pqc-suite/shared/offchain_store/1cef9a07d24702c2921c8f82fb006d9bd456b7a94fa8781677314ed5fcf313d2.pub"
+    "signature_path": "/mnt/d/PTIT/Ky6_PTIT/MMHCS/demo/pqc-suite/shared/offchain_store/671eee2e3aa493d7d4e618d5c73cf0ec188b3a7dd46528257dc9ce00e3d15aad.sig",
+    "public_key_path": "/mnt/d/PTIT/Ky6_PTIT/MMHCS/demo/pqc-suite/shared/offchain_store/00396a181673ffccbe287300e9323f087eda10cf3974bd7b030ea762588b2f36.pub"
   },
   "benchmark": {
-    "signature_download_seconds": 0.016133,
-    "public_key_download_seconds": 0.009369,
-    "hash_comparison_seconds": 0.000868,
-    "pqc_verify_seconds": 0.000247,
-    "e2e_verification_latency": 0.026617
+    "signature_download_seconds": 0.021871,
+    "public_key_download_seconds": 0.015134,
+    "hash_comparison_seconds": 0.00018,
+    "pqc_verify_seconds": 0.000133,
+    "e2e_verification_latency": 0.037318
   }
 }

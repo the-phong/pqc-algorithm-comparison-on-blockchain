@@ -3,103 +3,126 @@
   "count": 5,
   "max_retries": 2,
   "retry_delay_seconds": 2.0,
-  "contract_address": "0x108A23e957cE219553DA5dF177a3DE142ba2e4FA",
+  "contract_address": "0x1422a403ecCD22c97D6454d954ECE6777ddBC140",
   "account": "0x3aBeB3b1EAd8EcC5203540db2d79dD1880dc94B1",
   "chain_id": 11155111,
   "pqc_algorithm": "sphincs_sha2_128f_simple",
   "summary": {
-    "success_count": 3,
-    "failure_count": 2,
-    "success_rate_percent": 60.0,
-    "average_latency_seconds": 22.841377,
-    "max_latency_seconds": 33.278625,
-    "min_latency_seconds": 11.358404,
-    "p50_latency_seconds": 23.887101,
-    "p95_latency_seconds": 32.339473,
-    "p99_latency_seconds": 33.090795,
-    "throughput_tx_per_second": 0.037738,
-    "benchmark_elapsed_seconds": 79.494855,
-    "retry_count": 4,
-    "error_breakdown": {
-      "insufficient_funds": 2
-    }
+    "success_count": 5,
+    "failure_count": 0,
+    "success_rate_percent": 100.0,
+    "average_latency_seconds": 10.498408,
+    "max_latency_seconds": 12.527724,
+    "min_latency_seconds": 6.561816,
+    "p50_latency_seconds": 11.045805,
+    "p95_latency_seconds": 12.36575,
+    "p99_latency_seconds": 12.495329,
+    "throughput_tx_per_second": 0.091765,
+    "benchmark_elapsed_seconds": 54.487278,
+    "retry_count": 0,
+    "error_breakdown": {}
   },
   "runs": [
     {
-      "message": "Availability pqc_hybrid at 2026-04-16T16:24:29.377460Z",
-      "tx_hash": "b3064649ac8b9c6f55327113d47d9942f65cc63953ea147669409ba94e187c48",
+      "message": "Availability pqc_hybrid at 2026-05-10T06:43:05.455610Z",
+      "tx_hash": "b1fda141c7b9a467c0f3bd7c06bf66d441da81228e7d6c9cdb948313c813e10f",
       "status": 1,
-      "gas_used": 268655,
-      "record_id": 60,
-      "app_nonce": 1776356669377535329,
-      "timestamp": 1776356669,
+      "gas_used": 298318,
+      "record_id": 41,
+      "app_nonce": 1778395385455650519,
+      "timestamp": 1778395385,
       "encrypted": false,
       "benchmark": {
-        "pqc_keygen_seconds": 0.002376,
-        "pqc_sign_seconds": 0.036835,
-        "pqc_verify_seconds": 0.003275,
-        "tx_build_seconds": 0.064554,
-        "ecdsa_sign_seconds": 0.017228,
-        "send_and_confirm_seconds": 33.278625
+        "pqc_keygen_seconds": 0.000909,
+        "pqc_sign_seconds": 0.019066,
+        "pqc_verify_seconds": 0.001213,
+        "tx_build_seconds": 0.076423,
+        "ecdsa_sign_seconds": 0.020285,
+        "send_and_confirm_seconds": 6.561816
       },
       "attempt": 1,
       "retries_used": 0
     },
     {
-      "message": "Availability pqc_hybrid at 2026-04-16T16:25:03.040401Z",
-      "tx_hash": "234efc24e5b32694c6b7665295c0734691c2f3f3ff7a227a6aa8102c0ff22bc9",
+      "message": "Availability pqc_hybrid at 2026-05-10T06:43:12.417536Z",
+      "tx_hash": "11d437071f512cb4fb2472fc83e30a76fe3b94e759c7eaa75879ecb6077e9904",
       "status": 1,
-      "gas_used": 268655,
-      "record_id": 61,
-      "app_nonce": 1776356703040616958,
-      "timestamp": 1776356703,
+      "gas_used": 298306,
+      "record_id": 42,
+      "app_nonce": 1778395392417681710,
+      "timestamp": 1778395392,
       "encrypted": false,
       "benchmark": {
-        "pqc_keygen_seconds": 0.002954,
-        "pqc_sign_seconds": 0.043198,
-        "pqc_verify_seconds": 0.001707,
-        "tx_build_seconds": 0.060794,
-        "ecdsa_sign_seconds": 0.010565,
-        "send_and_confirm_seconds": 23.887101
+        "pqc_keygen_seconds": 0.002003,
+        "pqc_sign_seconds": 0.020019,
+        "pqc_verify_seconds": 0.001102,
+        "tx_build_seconds": 0.072747,
+        "ecdsa_sign_seconds": 0.026863,
+        "send_and_confirm_seconds": 11.045805
       },
       "attempt": 1,
       "retries_used": 0
     },
     {
-      "message": "Availability pqc_hybrid at 2026-04-16T16:25:27.349865Z",
-      "tx_hash": "01c836af6c57b94a1f0146bc1b958d240fced82f9d72de9398b820d647a8d54a",
+      "message": "Availability pqc_hybrid at 2026-05-10T06:43:23.857484Z",
+      "tx_hash": "b646e7821d6dc5e10a8ad28960b86413a911697130bbe39971f52ae5ed83822a",
       "status": 1,
-      "gas_used": 268655,
-      "record_id": 62,
-      "app_nonce": 1776356727350079461,
-      "timestamp": 1776356727,
+      "gas_used": 298318,
+      "record_id": 43,
+      "app_nonce": 1778395403857654577,
+      "timestamp": 1778395403,
       "encrypted": false,
       "benchmark": {
-        "pqc_keygen_seconds": 0.002876,
-        "pqc_sign_seconds": 0.040795,
-        "pqc_verify_seconds": 0.001624,
-        "tx_build_seconds": 0.069381,
-        "ecdsa_sign_seconds": 0.018588,
-        "send_and_confirm_seconds": 11.358404
+        "pqc_keygen_seconds": 0.00285,
+        "pqc_sign_seconds": 0.020932,
+        "pqc_verify_seconds": 0.001186,
+        "tx_build_seconds": 0.069185,
+        "ecdsa_sign_seconds": 0.022064,
+        "send_and_confirm_seconds": 12.527724
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-05-10T06:43:36.777948Z",
+      "tx_hash": "23b2b665422351c66c1722693eae900206d5aafce6ddad08f6c19da4b1981017",
+      "status": 1,
+      "gas_used": 298306,
+      "record_id": 44,
+      "app_nonce": 1778395416778133736,
+      "timestamp": 1778395416,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.00293,
+        "pqc_sign_seconds": 0.020866,
+        "pqc_verify_seconds": 0.001086,
+        "tx_build_seconds": 0.071713,
+        "ecdsa_sign_seconds": 0.027311,
+        "send_and_confirm_seconds": 10.638844
+      },
+      "attempt": 1,
+      "retries_used": 0
+    },
+    {
+      "message": "Availability pqc_hybrid at 2026-05-10T06:43:47.849145Z",
+      "tx_hash": "9244fefc802e90d2b93e18de0d7d33ed9d25609e32ac52d102df21eebe3c7bbe",
+      "status": 1,
+      "gas_used": 298318,
+      "record_id": 45,
+      "app_nonce": 1778395427849342896,
+      "timestamp": 1778395427,
+      "encrypted": false,
+      "benchmark": {
+        "pqc_keygen_seconds": 0.003192,
+        "pqc_sign_seconds": 0.023472,
+        "pqc_verify_seconds": 0.001159,
+        "tx_build_seconds": 0.068013,
+        "ecdsa_sign_seconds": 0.011591,
+        "send_and_confirm_seconds": 11.717853
       },
       "attempt": 1,
       "retries_used": 0
     }
   ],
-  "failures": [
-    {
-      "attempt": 3,
-      "retries_used": 2,
-      "error_type": "insufficient_funds",
-      "error": "{'code': -32003, 'message': 'insufficient funds for gas * price + value: have 14917157027285114 want 15000000000000000'}",
-      "run_index": 4
-    },
-    {
-      "attempt": 3,
-      "retries_used": 2,
-      "error_type": "insufficient_funds",
-      "error": "{'code': -32003, 'message': 'insufficient funds for gas * price + value: have 14917157027285114 want 15000000000000000'}",
-      "run_index": 5
-    }
-  ]
+  "failures": []
 }

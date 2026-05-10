@@ -13,7 +13,6 @@ Shared files are outside this folder:
 - `../../shared/python/common.py`
 
 Main scripts:
-- `scripts/traditional_demo.py`
 - `scripts/kem_confidentiality_demo.py`
 - `scripts/availability_kem_benchmark.py`
 - `benchmark/compare_kem.py`
@@ -22,10 +21,11 @@ Main scripts:
 Quick start:
 ```bash
 cp .env.example .env
-python3 scripts/traditional_demo.py
 python3 scripts/kem_confidentiality_demo.py
-python3 scripts/availability_kem_benchmark.py --mode traditional --count 5
 python3 scripts/availability_kem_benchmark.py --mode kyber_kem_confidential --count 5
 python3 benchmark/compare_kem.py
 python3 benchmark/compare_availability_kem.py
 ```
+
+Notes:
+- All traditional comparisons reuse the shared Dilithium baseline from `../dilithium/benchmark/results/`.

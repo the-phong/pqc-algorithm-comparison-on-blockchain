@@ -1,4 +1,4 @@
-"""Availability benchmark for traditional, PQC hybrid, and confidential modes."""
+"""Availability benchmark for SPHINCS+ PQC hybrid and confidential modes."""
 
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--mode",
-        choices=["traditional", "pqc_hybrid", "pqc_confidential"],
+        choices=["pqc_hybrid", "pqc_confidential"],
         required=True,
     )
     parser.add_argument("--count", type=int, default=5)

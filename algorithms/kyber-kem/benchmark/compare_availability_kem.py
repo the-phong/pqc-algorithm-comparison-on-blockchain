@@ -8,7 +8,7 @@ from pathlib import Path
 
 RESULTS_DIR = Path(__file__).resolve().parent / "results"
 INPUT_FILES = {
-    "traditional": RESULTS_DIR / "availability_traditional.json",
+    "traditional": Path(__file__).resolve().parents[2] / "dilithium" / "benchmark" / "results" / "availability_traditional.json",
     "kyber_kem_confidential": RESULTS_DIR / "availability_kyber_kem_confidential.json",
 }
 OUTPUT_MD = RESULTS_DIR / "availability_summary_kem.md"

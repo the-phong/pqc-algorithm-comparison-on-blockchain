@@ -1,4 +1,4 @@
-"""Compare traditional baseline against ML-KEM confidentiality results."""
+"""Compare shared traditional baseline against ML-KEM confidentiality results."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 RESULTS_DIR = Path(__file__).resolve().parent / "results"
-TRADITIONAL_RESULT = RESULTS_DIR / "traditional_result.json"
+TRADITIONAL_RESULT = Path(__file__).resolve().parents[2] / "dilithium" / "benchmark" / "results" / "traditional_result.json"
 KEM_RESULT = RESULTS_DIR / "kyber_confidentiality_result.json"
 OUTPUT_PLOT = RESULTS_DIR / "comparison_kem.png"
 
@@ -22,6 +22,7 @@ def load_result(path: Path) -> dict:
 
 def print_summary(traditional: dict, kem_result: dict) -> None:
     print("Comparison Summary")
+    print("Traditional baseline source: dilithium/benchmark/results/traditional_result.json")
     print(f"Traditional tx hash: {traditional['tx_hash']}")
     print(f"ML-KEM tx hash: {kem_result['tx_hash']}")
     print(f"Traditional gas used: {traditional['gas_used']}")
@@ -60,7 +61,7 @@ def save_plot(traditional: dict, kem_result: dict) -> Path:
     plt.bar([x + width / 2 for x in x_positions], kem_values, width=width, label="ML-KEM Confidential")
     plt.xticks(list(x_positions), labels)
     plt.ylabel("Value")
-    plt.title("Traditional vs ML-KEM Confidentiality")
+    plt.title("Shared Traditional vs ML-KEM Confidentiality")
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUTPUT_PLOT)

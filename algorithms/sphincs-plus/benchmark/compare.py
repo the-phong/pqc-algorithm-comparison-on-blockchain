@@ -1,4 +1,4 @@
-"""Compare benchmark outputs from traditional and PQC demo runs."""
+"""Compare shared traditional baseline against SPHINCS+ PQC demo results."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 RESULTS_DIR = Path(__file__).resolve().parent / "results"
-TRADITIONAL_RESULT = RESULTS_DIR / "traditional_result.json"
+TRADITIONAL_RESULT = Path(__file__).resolve().parents[2] / "dilithium" / "benchmark" / "results" / "traditional_result.json"
 PQC_RESULT = RESULTS_DIR / "pqc_result.json"
 OUTPUT_PLOT = RESULTS_DIR / "comparison.png"
 
@@ -22,6 +22,7 @@ def load_result(path: Path) -> dict:
 
 def print_summary(traditional: dict, pqc: dict) -> None:
     print("Comparison Summary")
+    print("Traditional baseline source: dilithium/benchmark/results/traditional_result.json")
     print(f"Traditional tx hash: {traditional['tx_hash']}")
     print(f"PQC tx hash: {pqc['tx_hash']}")
     print(f"Traditional gas used: {traditional['gas_used']}")
@@ -63,7 +64,7 @@ def save_plot(traditional: dict, pqc: dict) -> Path:
     plt.bar([x + width / 2 for x in x_positions], pqc_values, width=width, label="PQC Hybrid")
     plt.xticks(list(x_positions), labels)
     plt.ylabel("Value")
-    plt.title("Traditional vs PQC Hybrid")
+    plt.title("Shared Traditional vs SPHINCS+ PQC Hybrid")
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUTPUT_PLOT)

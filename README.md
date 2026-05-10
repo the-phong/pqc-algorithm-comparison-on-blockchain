@@ -42,8 +42,13 @@ Common files used by every algorithm:
 
 ## Off-chain proof flow
 
-The Dilithium pack now supports an end-to-end proof flow:
+The signature packs now support an end-to-end proof flow:
 
-- sender stores the Dilithium signature and public key in local off-chain storage
+- sender stores the PQC signature and public key in local off-chain storage
 - sender writes `ipfsCid` and `algorithm` into the on-chain record
-- verifier reads the record, reloads the signature/public key, and verifies both the proof hash and the Dilithium signature
+- verifier reads the record, reloads the signature/public key, and verifies both the proof hash and the corresponding PQC signature
+
+## Shared Traditional Baseline
+
+- `algorithms/dilithium/scripts/traditional_demo.py` is the only maintained traditional sender script.
+- Other packs reuse Dilithium traditional outputs as the shared baseline for comparison and availability summaries.
